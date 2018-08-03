@@ -11,4 +11,4 @@ If you're working with Python for Deep Learning on Windows and would like to ins
 This particular project was developed using Anaconda3 v4.4 for Windows.
 Also recommended - the [Spyder IDE](https://anaconda.org/anaconda/spyder) - comes bundled with anaconda
 
-You'll also need to install the following Python packages - links to conda install commands provided :[OpenCV3](https://anaconda.org/conda-forge/opencv), [Keras](https://anaconda.org/conda-forge/keras)
+You'll also need to install the following Python packages - links to conda install commands provided : [OpenCV3](https://anaconda.org/conda-forge/opencv), [Keras](https://anaconda.org/conda-forge/keras)
