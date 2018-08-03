@@ -18,4 +18,4 @@ You'll need to install the following Python packages - links to conda installati
 
 ## License:
 
-[MIT License](./LICENSE)
+[GNU General Public License](./LICENSE)
