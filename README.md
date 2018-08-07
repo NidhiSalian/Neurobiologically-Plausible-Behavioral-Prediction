@@ -14,7 +14,7 @@ Also recommended is the [Spyder IDE](https://anaconda.org/anaconda/spyder) that 
 _Note: If you're new to Python3 and Anaconda, [this](https://www.listendata.com/2017/05/python-data-science.html) might come in handy._
 <br />
 
->>You'll need to install the following Python packages :
+You'll need to install the following Python packages :
  <details>
  <summary>Keras</summary>
  This line should let you [install Keras]((https://anaconda.org/conda-forge/keras)) (I used v2.1.5): 
@@ -30,7 +30,7 @@ _Note: If you're new to Python3 and Anaconda, [this](https://www.listendata.com/
  </details>
 <br />
 
-If you want to train your own model, you'll need a GPU. You need a massive processing capacity to learn the huge number of parameters(69,163,810 - last I checked) in the hidden dimensions of the LSTM units.
+>If you want to train your own model, you'll need a GPU. You need a massive processing capacity to learn the huge number of parameters(69,163,810 - last I checked) in the hidden dimensions of the LSTM units.
 
 ## Acknowledgements
 
