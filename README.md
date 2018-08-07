@@ -17,9 +17,11 @@ You'll need to install the following Python packages - links to conda installati
 
 ( Linux Users- common issues with OpenCV resolved [here](https://github.com/conda-forge/opencv-feedstock/issues/43) and [here](https://github.com/ContinuumIO/anaconda-issues/issues/9601))
 
+If you want to train your own model, you'll need a GPU. You need a massive processing capacity necessary to learn a huge number of paramters(138,392,736 - last I checked) in the hidden dimensions of the LSTM units.
+
 ## Acknowledgements
 
-I've used TimeDistributed() wrappers with my LSTM units to enable sequence to label mapping. It took me a while to wrap my head around it, but [this blogpost](https://machinelearningmastery.com/timedistributed-layer-for-long-short-term-memory-networks-in-python/) and [this github issue thread](https://github.com/keras-team/keras/issues/1029) and [this StackOverflow thread](https://stackoverflow.com/questions/46859712/confused-about-how-to-implement-time-distributed-lstm-lstm) definitely helped.
+I've used TimeDistributed() wrappers with my LSTM units to enable sequence to label mapping. It took me a while to wrap my head around it, but [this blogpost](https://machinelearningmastery.com/timedistributed-layer-for-long-short-term-memory-networks-in-python/), [this github issue thread](https://github.com/keras-team/keras/issues/1029) and [this StackOverflow thread](https://stackoverflow.com/questions/46859712/confused-about-how-to-implement-time-distributed-lstm-lstm) definitely helped.
 
 ## Note
 
