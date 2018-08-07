@@ -11,7 +11,7 @@ If you're working with Python for Deep Learning on Windows and would like to ins
 
 Also recommended is the [Spyder IDE](https://anaconda.org/anaconda/spyder) that comes bundled with anaconda. 
 
-_Note: If you're new to Python and Anaconda, [this](https://www.listendata.com/2017/05/python-data-science.html) might come in handy._
+_Note: If you're new to Python3 and Anaconda, [this](https://www.listendata.com/2017/05/python-data-science.html) might come in handy._
 
 You'll need to install the following Python packages - links to conda installation commands provided : [OpenCV3](https://anaconda.org/conda-forge/opencv), [Keras](https://anaconda.org/conda-forge/keras)
 
