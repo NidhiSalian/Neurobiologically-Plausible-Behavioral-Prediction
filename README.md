@@ -19,7 +19,7 @@ You'll need to install the following Python packages - links to conda installati
 
 ## Acknowledgements
 
-I've used TimeDistributed() wrappers with my LSTM units to enable sequence to label mapping. It took me a while to wrap my head around it, but [this blogpost](https://machinelearningmastery.com/timedistributed-layer-for-long-short-term-memory-networks-in-python/) and [this github issue thread](https://github.com/keras-team/keras/issues/1029) definitely helped.
+I've used TimeDistributed() wrappers with my LSTM units to enable sequence to label mapping. It took me a while to wrap my head around it, but [this blogpost](https://machinelearningmastery.com/timedistributed-layer-for-long-short-term-memory-networks-in-python/) and [this github issue thread](https://github.com/keras-team/keras/issues/1029) and [this StackOverflow thread](https://stackoverflow.com/questions/46859712/confused-about-how-to-implement-time-distributed-lstm-lstm) definitely helped.
 
 ## Note
 
