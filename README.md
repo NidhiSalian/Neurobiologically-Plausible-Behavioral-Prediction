@@ -12,6 +12,7 @@ If you're working with Python for Deep Learning on Windows and would like to ins
 Also recommended is the [Spyder IDE](https://anaconda.org/anaconda/spyder) that comes bundled with anaconda. 
 
 _Note: If you're new to Python3 and Anaconda, [this](https://www.listendata.com/2017/05/python-data-science.html) might come in handy._
+****
 
 You'll need to install the following Python packages :
  <details>
@@ -31,8 +32,7 @@ You'll need to install the following Python packages :
  ```
  ( _Linux Users- a common issue with OpenCV - resolved [here](https://github.com/conda-forge/opencv-feedstock/issues/43)_)
  </details>
-
-
+****
 
 If you want to train your own model, you'll need a GPU. You need a massive processing capacity to learn the huge number of parameters(69,163,810 - last I checked) in the hidden dimensions of the LSTM units.
 
