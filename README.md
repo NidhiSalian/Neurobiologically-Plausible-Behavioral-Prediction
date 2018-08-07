@@ -14,6 +14,7 @@ Also recommended is the [Spyder IDE](https://anaconda.org/anaconda/spyder) that 
 _Note: If you're new to Python3 and Anaconda, [this](https://www.listendata.com/2017/05/python-data-science.html) might come in handy._
 
 You'll need to install the following Python packages - links to conda installation commands provided : [OpenCV3](https://anaconda.org/conda-forge/opencv), [Keras](https://anaconda.org/conda-forge/keras)
+A common issue with libprotobuf in the openCV installation is resolved [here](https://github.com/ContinuumIO/anaconda-issues/issues/9601)
 
 ## Acknowledgements
 
