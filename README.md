@@ -33,6 +33,7 @@ You'll need to install the following Python packages :
  </details>
 
 
+
 If you want to train your own model, you'll need a GPU. You need a massive processing capacity to learn the huge number of parameters(69,163,810 - last I checked) in the hidden dimensions of the LSTM units.
 
 ## Acknowledgements
