@@ -18,18 +18,13 @@ You'll need to install the following Python packages :
  <details>
  <summary>Keras</summary>
  This line should let you [install Keras]((https://anaconda.org/conda-forge/keras)) (I used v2.1.5):
- 
- ```swift
- conda install -c conda-forge keras 
- ```
+ `conda install -c conda-forge keras `
  </details>
  <details>
  <summary>OpenCV</summary>
  This line should let you [install OpenCV](https://anaconda.org/conda-forge/opencv) (I used v3.4.1):  
+ `conda install -c conda-forge opencv`
  
- ```swift
- conda install -c conda-forge opencv
- ```
  ( _Linux Users- a common issue with OpenCV - resolved [here](https://github.com/conda-forge/opencv-feedstock/issues/43)_)
  </details>
 <br />
