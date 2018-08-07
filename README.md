@@ -15,7 +15,7 @@ _Note: If you're new to Python3 and Anaconda, [this](https://www.listendata.com/
 
 You'll need to install the following Python packages - links to conda installation commands provided : [OpenCV3](https://anaconda.org/conda-forge/opencv), [Keras](https://anaconda.org/conda-forge/keras)
 
-(A common issue with libprotobuf in the openCV installation is resolved [here](https://github.com/ContinuumIO/anaconda-issues/issues/9601))
+( Linux Users- common issues with OpenCV resolved [here](https://github.com/conda-forge/opencv-feedstock/issues/43) and [here](https://github.com/ContinuumIO/anaconda-issues/issues/9601))
 
 ## Acknowledgements
 
