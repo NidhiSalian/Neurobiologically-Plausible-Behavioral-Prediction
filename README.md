@@ -15,13 +15,13 @@ _Note: If you're new to Python and Anaconda, [this](https://www.listendata.com/2
 
 You'll need to install the following Python packages - links to conda installation commands provided : [OpenCV3](https://anaconda.org/conda-forge/opencv), [Keras](https://anaconda.org/conda-forge/keras)
 
-## Note
-
-I developed this particular project using Anaconda3 v4.4 for Windows, but I've made sure my code is 100% portable _as is_ to any other OS. I've already tested it with Linux variants. If you have any issues running this project on your setup despite meeting all the listed requirements, feel free to mail me at : nidhisalian08@gmail.com.
-
 ## Acknowledgements
 
 I've used TimeDistributedDense() with my LSTM units to enable sequence to label mapping. It took me a while to wrap my head around it, but [this blogpost](https://machinelearningmastery.com/timedistributed-layer-for-long-short-term-memory-networks-in-python/) and [this github issue thread](https://github.com/keras-team/keras/issues/1029) definitely helped.
+
+## Note
+
+I developed this particular project using Anaconda3 v4.4 for Windows, but I've made sure my code is 100% portable _as is_ to any other OS. I've already tested it with Linux variants. If you have any issues running this project on your setup despite meeting all the listed requirements, feel free to mail me at : nidhisalian08@gmail.com.
 
 ## License:
 
