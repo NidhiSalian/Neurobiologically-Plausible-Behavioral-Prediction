@@ -27,10 +27,8 @@ You'll need to install the following Python packages :
  ```swift
  conda install -c conda-forge opencv
  ```
+ ( _Linux Users- a common issue with OpenCV - resolved [here](https://github.com/conda-forge/opencv-feedstock/issues/43)_)
  </details>
- 
-
-( Linux Users- a common issue with OpenCV - resolved [here](https://github.com/conda-forge/opencv-feedstock/issues/43))
 
 If you want to train your own model, you'll need a GPU. You need a massive processing capacity to learn the huge number of parameters(69,163,810 - last I checked) in the hidden dimensions of the LSTM units.
 
