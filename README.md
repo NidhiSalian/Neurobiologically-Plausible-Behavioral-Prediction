@@ -17,7 +17,7 @@ You'll need to install the following Python packages - links to conda installati
 
 ( Linux Users- common issues with OpenCV resolved [here](https://github.com/conda-forge/opencv-feedstock/issues/43) and [here](https://github.com/ContinuumIO/anaconda-issues/issues/9601))
 
-If you want to train your own model, you'll need a GPU. You need a massive processing capacity necessary to learn a huge number of paramters(138,392,736 - last I checked) in the hidden dimensions of the LSTM units.
+If you want to train your own model, you'll need a GPU. You need a massive processing capacity to learn the huge number of parameters(138,392,736 - last I checked) in the hidden dimensions of the LSTM units.
 
 ## Acknowledgements
 
