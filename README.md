@@ -39,7 +39,7 @@ I've used TimeDistributed() wrappers with my LSTM units to enable sequence to la
 
 ## Note
 
-I developed this particular project using Anaconda3 v4.4 for Windows, but I've tried to make sure my code is 100% portable _as is_ to any other OS. I've already tested it with Linux variants. If you have any issues running this project on your setup despite meeting all the listed requirements, feel free to mail me at : nidhisalian08@gmail.com.
+I developed this particular project using Anaconda3 v4.4 for Windows, but I've tried to make sure my code is 100% portable _as is_ to any other OS. I've already tested it with Linux variants(CentOS 6.8 and Ubuntu 16.04). If you have any issues running this project on your setup despite meeting all the listed requirements, feel free to mail me at : nidhisalian08@gmail.com.
 
 ## License:
 
