@@ -10,7 +10,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-
+#set paths to local directories
 project_directory = os.path.abspath('..')
 stshi_storage = os.path.join(project_directory,"data","va_output")
 
@@ -50,10 +50,9 @@ class Visual_Attention_Module():
         while(cap.isOpened()):
     
             ret, frame = cap.read()
-            if ret == False:        
+            if ret == False:    
+                #End of video
                 break
-    
-             
              
             #process every other frame.
             if frame_number%2==0:
@@ -69,19 +68,18 @@ class Visual_Attention_Module():
             mag, ang = cv2.cartToPolar(flow[...,0], flow[...,1])
             hsv[...,0] = ang*180/np.pi/2
             hsv[...,2] = cv2.normalize(mag,None,0,255,cv2.NORM_MINMAX)
-            gray_motion = cv2.cvtColor(hsv,cv2.COLOR_BGR2GRAY)
-            #rgb_motion = cv2.cvtColor(hsv,cv2.COLOR_HSV2BGR)
+            gray_motion = cv2.cvtColor(hsv,cv2.COLOR_BGR2GRAY
            
             #spatial saliency
             (success_filter, spatial_saliencyMap) = saliencyfilter.computeSaliency(frame);
-    
 
             #threshmap of spatiotemporally salient locations
-            spacetime_saliency_threshMap = cv2.threshold(spatial_saliencyMap+gray_motion, 80, 255,	cv2.THRESH_BINARY_INV)[1]#| cv2.THRESH_OTSU)[1];
+            spacetime_saliency_threshMap = cv2.threshold(spatial_saliencyMap+gray_motion, 80, 255,	cv2.THRESH_BINARY_INV)[1]
             spacetime_saliencyMap = cv2.bitwise_and(frame, frame, mask = spacetime_saliency_threshMap)
     
-            #sthi = old mhi blended with masked img
+            #sthi = old stshi blended with masked img
             stshi_template = cv2.addWeighted(spacetime_saliency_threshMap,0.6,stshi_template,0.4,0)
+            stshi_template_viewable = cv2.addWeighted(spacetime_saliencyMap,0.6,stshi_template,0.4,0)
             
             if frame_number == template_duration:  
                 frame_number = 0
@@ -97,7 +95,7 @@ class Visual_Attention_Module():
             #The following commands work well with windows or Ubuntu/Debian systems with GTK+ 2.x 
             cv2.imshow('Raw Input',frame)
             cv2.imshow('Spatio-Temporal Saliency',spacetime_saliencyMap)
-            cv2.imshow('STSHI',stshi_template)
+            cv2.imshow('STSHI',stshi_template_viewable)
             if cv2.waitKey(40) & 0xFF == ord('q'):
                 break
                 
@@ -110,7 +108,7 @@ class Visual_Attention_Module():
             plt.show()
             plt.imshow(cv2.cvtColor(spacetime_saliencyMap, cv2.COLOR_BGR2RGB))
             plt.show()
-            plt.imshow(cv2.cvtColor(stshi_template, cv2.COLOR_BGR2RGB))
+            plt.imshow(cv2.cvtColor(stshi_template_viewable, cv2.COLOR_BGR2RGB))
             plt.show()
             '''           
             
