@@ -20,6 +20,7 @@ from keras.utils.layer_utils import print_summary;
 from keras import optimizers, metrics
 from dataset_loader import Dataset
 
+#set path to local directories
 project_directory = os.path.abspath('..')
 model_backup_path =  os.path.join(project_directory,"data","backup")
 
@@ -69,7 +70,6 @@ y_test = np.expand_dims(y_test, axis = 1)
 print("Training Input dimensions : ", np.shape(x_train))
 print("Validation Input dimensions : ", np.shape(x_test))
 
-
 print("Training Output dimensions : ", np.shape(y_train))
 print("Validation Output dimensions : ", np.shape(y_test))
 
@@ -81,9 +81,11 @@ sequence = Input(shape=(1, input_dimensions[1], input_dimensions[2]), dtype='flo
 lstm_cell1 = LSTM(hidden_dim, activation='tanh', recurrent_activation='hard_sigmoid', use_bias=True, return_sequences = True)
 lstm_cell2 = LSTM(hidden_dim, activation='tanh', recurrent_activation='hard_sigmoid', use_bias=True,  return_sequences = False)
 #Make the lstm cells bidirectional + time distributed
+#The first unit produces one output per stshi template
 bi_lstm_unit1 = TimeDistributed(Bidirectional(lstm_cell1, merge_mode='concat', weights=None))(sequence)
+#The second lstm outputs one one output for the whole sequence
 bi_lstm_unit2 = TimeDistributed(Bidirectional(lstm_cell2, merge_mode='concat', weights=None))(bi_lstm_unit1)
-#time distributed dense layer to allow for sequence to label mapping
+
 
 #Dropout layer prevents overfitting
 after_dp = Dropout(0.6)(bi_lstm_unit2)
