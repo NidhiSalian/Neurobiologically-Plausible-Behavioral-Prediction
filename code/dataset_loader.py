@@ -13,6 +13,7 @@ import numpy as np
 from visual_attention_module import Visual_Attention_Module
 print("\n\nVisual Attention Module loaded.\n\n")
 
+#set path to local directories
 project_directory = os.path.abspath('..')
 annotations_path = os.path.join(project_directory,"data","annotations")
 video_labels_path_train = os.path.join(annotations_path, "Charades_v1_train.csv")
@@ -21,14 +22,16 @@ activity_classes_path = os.path.join(annotations_path, "Charades_v1_classes.txt"
 video_path = os.path.join(project_directory,"data","videos")
 stshi_path =  os.path.join(project_directory,"data","va_output")
 
-
+#function to delete all files in a given directory
 def empty_folder(folder_path):
     for root, dirs, files in os.walk(folder_path):
         for file in files:
             os.remove(os.path.join(root, file))
 
+	
 class Dataset(object):
     
+    #function to encode class labels as hot vectors	
     def hot_encode(self, label_type, all_labels, curr_labels):
         hot_vector = [0.0] * len(all_labels)
         indices_1 = []
@@ -47,7 +50,6 @@ class Dataset(object):
         return hot_vector
             
     def __init__(self, phase, duration, maxlen):
-        X_current_stshiseq = []
         X_all_stshiseq = []
         Y_all = []
         
@@ -57,20 +59,17 @@ class Dataset(object):
             video_labels_path = video_labels_path_test
         
         df = pd.read_csv(video_labels_path, names = ["A", "B", "C", "D", "E", "F","G","H","I","J","K"], usecols = ["A","C","J"], skiprows = 1, nrows = 500)
-        
-        
-        #DEBUG step:
+        total_rows = len(df.index)
+	#DEBUG step:
         #print(df)
         
         #collect all activity classes and context classes
         with open(activity_classes_path, 'r') as f:
             activity_labels = [line.split(None, 1)[0] for line in f] #should be loaded from activity classes file
         context_labels = df.C.unique()
-        
-        total_rows = len(df.index)
-        
+
+
         for i, row in df.iterrows(): 
-            
             
             #send video to Visual Attention Module                
             video_src = os.path.join(video_path,str(row["A"]) + ".mp4")
@@ -80,26 +79,29 @@ class Dataset(object):
                 print("\nRow: {} of {}; Currently iterrated {}% of rows".format(i, total_rows, (i + 1)/total_rows * 100))
                 print("Video : " + video_src + " is being processed.")
                 #clear the va_output folder
-                empty_folder(stshi_path)
-                X_current_stshiseq = []
+                empty_folder(stshi_path)         
+				#The VA_Module outputs stshi templates that are stored in the va_output folder
                 Visual_Attention_Module.process_scenes(video_src, duration)
             else:
                 print("Video : " + video_src + " could not be opened.")
                 continue
-            
-            #open the stshi_temp file
-        
+			
+			#clear the current sequence
+            X_current_stshiseq = []
+            #open the va_output folder and read each template
             for x_file in os.listdir(stshi_path):
                 stshi_img = np.asarray(cv2.imread(os.path.join(stshi_path,x_file), 0))
-                #load image as a flattened matrix
+                #load template(image/matrix) as a flattened matrix(vector)
                 if stshi_img is not None:
+					#append template to sequence
                     X_current_stshiseq.append(np.ravel(stshi_img))
-                    
-            X_current_stshiseq = np.asarray(pad_vec_sequences(X_current_stshiseq, maxlen))
-           
-            X_all_stshiseq.append(X_current_stshiseq)
             
-            Y_current = np.concatenate((Y_current_activity_vector, Y_current_context_vector))
+			#pad/truncate each sequence to fixed length
+            X_current_stshiseq = np.asarray(pad_vec_sequences(X_current_stshiseq, maxlen))
+           	
+			Y_current = np.concatenate((Y_current_activity_vector, Y_current_context_vector))
+
+			X_all_stshiseq.append(X_current_stshiseq)         
             Y_all.append(Y_current)
             
         self.X_all_stshiseq= X_all_stshiseq
@@ -107,9 +109,7 @@ class Dataset(object):
         self.context_labels = context_labels
         self.Y_all = Y_all
         
-        
-
-#TODO - Pad each stshi sequence to equal length matrices - upto maxlen
+ 
 def pad_vec_sequences(sequence,maxlen=36):
     new_sequence = []
     dimensions = np.shape(sequence)
@@ -126,18 +126,4 @@ def pad_vec_sequences(sequence,maxlen=36):
         new_sequence = sequence[:maxlen]
     return new_sequence
 
-    '''
-	for sequence in sequences:
-		
-		orig_len, vec_len = np.shape(sequence)
-		if orig_len < maxlen:
-			new = np.zeros((maxlen,vec_len))
-			new[maxlen-orig_len:,:] = sequence
-		else:
-			#print(sequence)
-			new = sequence[orig_len-maxlen:,:]
-		new_sequences.append(new)
-	new_sequences = np.array(new_sequences)
-	#print(new_sequences.shape)
-    '''
 	
