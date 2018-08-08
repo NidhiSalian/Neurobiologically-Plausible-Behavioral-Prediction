@@ -3,7 +3,7 @@ A model of mixed neural networks for step-by-step processing of dynamic visual s
 
 Based on Ongoing Research Work.
 
-Code, datasets and models to be uploaded soon. 
+More code, datasets and models to be uploaded soon. 
 
 ## Pre-Requisites 
 
