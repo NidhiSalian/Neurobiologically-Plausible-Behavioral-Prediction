@@ -26,6 +26,7 @@ You'll need to install the following Python packages :
  This line should let you [install OpenCV](https://anaconda.org/conda-forge/opencv) (I used v3.4.1): 
  
  `conda install -c conda-forge opencv`
+ 
  ( _Linux Users- a common issue with OpenCV - resolved [here](https://github.com/conda-forge/opencv-feedstock/issues/43)_)
  </details>
 <br />
