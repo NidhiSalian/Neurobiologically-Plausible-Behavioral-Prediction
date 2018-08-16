@@ -41,7 +41,7 @@ The contents of this repository are organized as follows:
       |     |__datasetloader.py 
       |     |__visualattentionmodule.py 
       |     |__drivermodule.py 
-      |__data \s
+      |__data 
             |__backup 
             |__va_output 
             |__annotations 
