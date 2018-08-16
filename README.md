@@ -36,14 +36,14 @@ You'll need to install the following Python packages :
 ## what This repo Contains
 
 The contents of this repository are organized as follows:
---|__code
-  |     |__datasetloader.py
-  |     |__visualattentionmodule.py
-  |     |__drivermodule.py
-  |__data
-        |__backup
-        |__va_output
-        |__annotations
+    --|__code
+      |     |__datasetloader.py
+      |     |__visualattentionmodule.py
+      |     |__drivermodule.py
+      |__data
+            |__backup
+            |__va_output
+            |__annotations
 
 ## Acknowledgements
 
