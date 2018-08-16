@@ -33,7 +33,7 @@ You'll need to install the following Python packages :
 
 >If you want to train your own model, you'll need a GPU. A massive ammount of processing power is required to learn the numerous parameters(30,874,671 - last I checked) in the hidden dimensions of the LSTM units. If you already have a GPU on your system, Keras should be able to detect it automatically. (Nvidia users can run a quick `nvidia-smi ` to confirm. )
 
-## what This repo Contains
+## What This repo Contains
 
 The contents of this repository are organized as follows:
 
