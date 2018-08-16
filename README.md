@@ -33,6 +33,18 @@ You'll need to install the following Python packages :
 
 >If you want to train your own model, you'll need a GPU. A massive ammount of processing power is required to learn the numerous parameters(30,874,671 - last I checked) in the hidden dimensions of the LSTM units. If you already have a GPU on your system, Keras should be able to detect it automatically. (Nvidia users can run a quick `nvidia-smi ` to confirm. )
 
+## what This repo Contains
+
+The contents of this repository are organized as follows:
+--|__code
+  |     |__datasetloader.py
+  |     |__visualattentionmodule.py
+  |     |__drivermodule.py
+  |__data
+        |__backup
+        |__va_output
+        |__annotations
+
 ## Acknowledgements
 
 I've used TimeDistributed() wrappers with my LSTM units to enable sequence to label mapping. It took me a while to wrap my head around it, but [this blogpost](https://machinelearningmastery.com/timedistributed-layer-for-long-short-term-memory-networks-in-python/), [this github issue thread](https://github.com/keras-team/keras/issues/1029) and [this StackOverflow thread](https://stackoverflow.com/questions/46859712/confused-about-how-to-implement-time-distributed-lstm-lstm) definitely helped.
