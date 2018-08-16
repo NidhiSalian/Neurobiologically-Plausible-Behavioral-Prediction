@@ -38,7 +38,7 @@ You'll need to install the following Python packages :
 The contents of this repository are organized as follows:
 
     --|__code 
-      |     |__datasetloader.py 
+      |     |__ *datasetloader.py*
       |     |__visualattentionmodule.py 
       |     |__drivermodule.py 
       |__data 
