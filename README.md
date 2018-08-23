@@ -45,6 +45,7 @@ The contents of this repository are organized as follows:
             |__backup 
             |__va_output 
             |__annotations 
+            |__videos
 
 ## Acknowledgements
 
