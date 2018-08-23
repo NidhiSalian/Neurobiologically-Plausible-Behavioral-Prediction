@@ -110,6 +110,9 @@ batch_size = 2
 #specify number of training epochs
 num_epoch = 10
 
+#print("\n\nLoad pretrained weights.")
+#mem_model = load_model(os.path.join(model_backup_path,"model1.h5"))
+
 print("\n\nFitting to model.")
 my_model = mem_model.fit(np.array(x_train), np.array(y_train), batch_size =batch_size, epochs=num_epoch, verbose =1, validation_data=[np.array(x_test), np.array(y_test)])
 
