@@ -98,10 +98,9 @@ class Dataset(object):
             
 			#pad/truncate each sequence to fixed length
             X_current_stshiseq = np.asarray(pad_vec_sequences(X_current_stshiseq, maxlen))
-           	
 			Y_current = np.concatenate((Y_current_activity_vector, Y_current_context_vector))
-
-			X_all_stshiseq.append(X_current_stshiseq)         
+			
+			X_all_stshiseq.append(X_current_stshiseq)      
             Y_all.append(Y_current)
             
         self.X_all_stshiseq= X_all_stshiseq
