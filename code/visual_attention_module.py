@@ -15,8 +15,8 @@ project_directory = os.path.abspath('..')
 stshi_storage = os.path.join(project_directory,"data","va_output")
 
 #set height and width of stshi templates
-image_height = 200
-image_width = 300
+image_height = 100
+image_width = 200
 
 
 class Visual_Attention_Module():
@@ -92,7 +92,7 @@ class Visual_Attention_Module():
                 stshi_template = next.copy()   
             # Watch the visual attention module in action by using the commands below
             '''
-            #The following commands work well with windows or Ubuntu/Debian systems with GTK+ 2.x 
+            #The following commands work well with Windows or Ubuntu/Debian systems with GTK+ 2.x 
             cv2.imshow('Raw Input',frame)
             cv2.imshow('Spatio-Temporal Saliency',spacetime_saliencyMap)
             cv2.imshow('STSHI',stshi_template_viewable)
