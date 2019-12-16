@@ -17,7 +17,7 @@ _Note: If you're new to Python3 and Anaconda, [this](https://www.listendata.com/
 You'll need to install the following Python packages :
  <details>
  <summary>Keras</summary>
- This line should let you [install Keras]((https://anaconda.org/conda-forge/keras)) (I used v2.1.5): 
+ This line should let you [install Keras](https://anaconda.org/conda-forge/keras) (I used v2.1.5): 
  
  `conda install -c conda-forge keras`
  </details>
