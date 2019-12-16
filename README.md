@@ -1,7 +1,7 @@
 # Neurobiologically-Plausible-Behavioral-Prediction
 A model of mixed neural networks for step-by-step processing of dynamic visual scenes, activity recognition and behavioral prediciton
 
-Based on Ongoing Research Work. You can find the most recent publication  [here](https://www.researchgate.net/publication/328129379_Visual_Attention_and_Memory_Augmented_Activity_Recognition_and_Behavioral_Prediction_9th_International_Conference_ATIS_2018_Nanning_China_November_9-11_2018_Proceedings), and the original paper can be found in this repo [here](https://github.com/NidhiSalian/Neurobiologically-Plausible-Behavioral-Prediction/blob/master/Visual%20Attention%20and%20Memory%20Augmented%20Activity%20Recognition%20and%20Behavioral%20Prediction.pdf).
+Based on some of my old research work. You can find the most recent publication  [here](https://www.researchgate.net/publication/328129379_Visual_Attention_and_Memory_Augmented_Activity_Recognition_and_Behavioral_Prediction_9th_International_Conference_ATIS_2018_Nanning_China_November_9-11_2018_Proceedings), and the initial draft can be found in this repo [here](https://github.com/NidhiSalian/Neurobiologically-Plausible-Behavioral-Prediction/blob/master/Visual%20Attention%20and%20Memory%20Augmented%20Activity%20Recognition%20and%20Behavioral%20Prediction.pdf).
 
 More code, datasets and models to be uploaded soon. 
 
